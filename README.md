@@ -38,4 +38,4 @@ We're always looking for contributors to help us make our bot even better. Wheth
 With your help, we can make our bot the go-to resource for Call of Dragons fans everywhere.
 
 ## Contributors ❤️
-[Katelyn Breaty](https://github.com/kat3lyns) -
+[Katelyn Breaty](https://github.com/kat3lyns)
