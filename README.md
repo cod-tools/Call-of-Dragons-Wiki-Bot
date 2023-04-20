@@ -1,6 +1,6 @@
 <h2 align="center">
   Call of Dragons Wiki Bot<br/>
-  <a href="https://discord.com/api/oauth2/authorize?client_id=1095889924978384906&permissions=8&scope=bot" target="_blank">Invite Bot</a>
+  <a href="https://discord.com/api/oauth2/authorize?client_id=1095889924978384906&permissions=2147601408&scope=bot" target="_blank">Invite Bot</a>
 </h2>
 
 Looking for information about Call of Dragons? Look no further than our trusty bot, designed to provide you with all the details you need about this thrilling game. With our bot, you'll have access to the latest information about heroes, artifacts, and behemoths – all in one convenient place.
