@@ -7,7 +7,7 @@ Looking for information about Call of Dragons? Look no further than our trusty b
 
 ## Requirements
 
-To get started with our bot, you'll need to have Node.js 14 or above installed on your machine. Don't worry if you're not familiar with Node.js – we've designed our installation process to be as simple as possible.
+To get started with our bot, you'll need to have Node.js 14 or above installed on your machine.
 
 ## What's Included
 
