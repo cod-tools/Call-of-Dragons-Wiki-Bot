@@ -16,7 +16,7 @@ Our bot is constantly being updated with new content, so you can stay up-to-date
 | Name              | Status                 |
 | ----------------- | ---------------------- |
 | Heroes            | **<u>Done</u>**        |
-| Artifacts         | **<u>To be added</u>** |
+| Artifacts         | **<u>Done</u>**        |
 | Behemoths         | **<u>To be added</u>** |
 
 ## Installation
