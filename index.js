@@ -11,6 +11,8 @@ const client = new Discord.Client({ intents: [],
 });
 const settings = require('./settings.json');
 
+const sleep = (ms) => { return new Promise(resolve => setTimeout(resolve, ms)) };
+
 const glob = require('glob');
 const { promisify } = require('util');
 const globPromise = promisify(glob);
@@ -23,6 +25,14 @@ client.on("ready", async() => {
     console.log(`Bot logged in, loading the handlers...`);
     
     const commands = client.application.commands;
+
+    /* Refresh commands
+    const loopCommands = await commands.fetch();
+    loopCommands.forEach(async(command) => {
+        await commands.delete(command);
+        console.log(`Deleted command /${command.name}.`);
+        await sleep(1000);
+    });*/
 
     // button
     const buttonFiles = await globPromise("./src/buttons/**/*.js");
