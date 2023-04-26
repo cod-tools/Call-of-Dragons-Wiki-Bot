@@ -18,7 +18,7 @@ Our bot is constantly being updated with new content, so you can stay up-to-date
 | Heroes            | **<u>Done</u>**        |
 | Artifacts         | **<u>Done</u>**        |
 | Behemoths         | **<u>To be added</u>** |
-| Tier List         | **<u>To be added</u>** |
+| Tier Lists        | **<u>To be added</u>** |
 | Talent Builds     | **<u>To be added</u>** |
 
 ## Installation
