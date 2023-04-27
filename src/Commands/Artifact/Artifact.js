@@ -33,7 +33,7 @@ module.exports = {
     } else {
 
       const attachment = new AttachmentBuilder()
-        .setFile(`./assets/Artifact/${artifact[userSelection]["image"]}`)
+        .setFile(`./assets/artifact/${artifact[userSelection]["image"]}`)
         .setName("image.png")
 
       if (artifact[userSelection]["image"] !== "") {
