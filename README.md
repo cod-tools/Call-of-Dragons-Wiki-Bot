@@ -26,7 +26,7 @@ Our bot is constantly being updated with new content, so you can stay up-to-date
 
 Get a list of all available heroes
 
->c!hero <name>
+>c!hero [name]
 
 Get information about a hero
 
@@ -34,7 +34,7 @@ Get information about a hero
 
 Get a list of all available artifacts
 
->c!artifact <name>
+>c!artifact [name]
 
 Get information about an artifact
 
