@@ -21,6 +21,23 @@ Our bot is constantly being updated with new content, so you can stay up-to-date
 | Tier Lists        | **<u>To be added</u>** |
 | Talent Builds     | **<u>To be added</u>** |
 
+### Commands
+>c!heroes
+
+Get a list of all available heroes
+
+>c!hero <name>
+
+Get information about a hero
+
+>c!artifacts
+
+Get a list of all available artifacts
+
+>c!artifact <name>
+
+Get information about an artifact
+
 ## Installation
 
 Getting started with our bot is easy. Just follow these simple steps:
