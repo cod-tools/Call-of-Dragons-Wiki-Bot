@@ -3,7 +3,7 @@ const hero = require("../../../contents/heroes.json");
 
 module.exports = {
   name: "hero",
-  description: "Get information about a Call of Dragons hero",
+  description: "Get information about a hero",
   usage: "<name>",
   example: "hero Alistair",
   cooldown: 5, // seconds

@@ -3,7 +3,7 @@ const heroes = require("../../../contents/heroes.json");
 
 module.exports = {
   name: "heroes",
-  description: "Get a list of all available heroes.",
+  description: "Get a list of all available heroes",
   cooldown: 5, // seconds
   botPermissions: "SendMessages",
 

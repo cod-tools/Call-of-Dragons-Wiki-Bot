@@ -3,7 +3,7 @@ const artifacts = require("../../../contents/artifacts.json");
 
 module.exports = {
   name: "artifacts",
-  description: "Get a list of all available artifacts!",
+  description: "Get a list of all available artifacts",
   cooldown: 5, // seconds
   botPermissions: "SendMessages",
 

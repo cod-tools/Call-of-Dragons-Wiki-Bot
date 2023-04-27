@@ -48,7 +48,7 @@ module.exports = {
           .setTitle("Slowdown!")
           .setDescription(`${prefix}${command.name} is on cooldown and will be available <t:${Math.round(timeLeft / 1000)}:R> `)
 
-        await message.reply({ embeds: [embed] }).then((m) => {
+        return message.reply({ embeds: [embed] }).then((m) => {
           setTimeout(async () => {
             await m.delete();
             await message.delete();

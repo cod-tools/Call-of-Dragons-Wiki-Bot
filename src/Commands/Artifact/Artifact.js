@@ -3,7 +3,7 @@ const artifact = require("../../../contents/artifacts.json");
 
 module.exports = {
   name: "artifact",
-  description: "Get information about a Call of Dragons hero",
+  description: "Get information about an artifact",
   usage: "<name>",
   example: "artifact Magic Bomb",
   cooldown: 5, // seconds
