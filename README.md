@@ -56,7 +56,7 @@ We're always looking for contributors to help us make our bot even better. Wheth
 - Submit a [New Issue](https://github.com/GamerRaven/CoD-Wiki-Bot/issues/new) to report bugs and issues
 - Submit a [New Issue](https://github.com/GamerRaven/CoD-Wiki-Bot/issues/new) to request new content or notify incorrect contents
 
-Want to learn how to add contents directly? Check out the instructions [HERE](https://github.com/GamerRaven/CoD-Wiki-Bot/wiki).
+Want to learn how to add contents directly? Check out the instructions [HERE](https://github.com/GamerRaven/Call-of-Dragons-Wiki-Bot/wiki/Code-Format).
 
 With your help, we can make our bot the go-to resource for Call of Dragons fans everywhere.
 
