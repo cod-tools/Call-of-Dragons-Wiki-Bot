@@ -18,7 +18,12 @@ module.exports = {
     const command = prefixCommands.get(cmd)
 
     if (!command) {
-      return;
+      const embed = new EmbedBuilder()
+        .setColor('Red')
+        .setTitle("Command not found")
+        .setDescription(`\`${message.content}\` is not a valid command.\nUse **${prefix}help** for a list of all commands.`)
+  
+      return message.reply({ embeds: [embed] })
     }
 
     let cooldowns = prefixCooldowns.get(message.guildId);
