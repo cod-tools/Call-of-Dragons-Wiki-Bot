@@ -6,7 +6,8 @@
       "buffs": "Rally",
       "units": "Cavalry",
       "tier": "C",
-      "pairings": "Emrys/Bakshi"
+      "pairings": "Emrys/Bakshi",
+      "talent": "https://callofdragonsguides.com/alistair-talent-tree-build-and-guide/"
     },
     "Alwyn": {
       "image": "Alwyn.png",
@@ -15,7 +16,8 @@
       "buffs": "PvP",
       "units": "Magic",
       "tier": "B",
-      "pairings": "Waldyr/Liliya"
+      "pairings": "Waldyr/Liliya",
+      "talent": "https://callofdragonsguides.com/alwyn-talent-tree-build-and-guide/"
     },
     "Atheus": {
       "image": "Atheus.png",
@@ -24,7 +26,8 @@
       "buffs": "PvP",
       "units": "Magic",
       "tier": "B",
-      "pairings": "Waldyr/Alwyn"
+      "pairings": "Waldyr/Alwyn",
+      "talent": "https://callofdragonsguides.com/atheus-talent-tree-build-guide/"
     },
     "Bakshi": {
       "image": "Bakshi.png",
@@ -33,7 +36,8 @@
       "buffs": "Peacekeeping",
       "units": "Cavalry",
       "tier": "S",
-      "pairings": "Emrys/Alistair"
+      "pairings": "Emrys/Alistair",
+      "talent": "https://callofdragonsguides.com/bakshi-talent-tree-build-guide/"
     },
     "Chakcha": {
       "image": "Chakcha.png",
@@ -42,7 +46,8 @@
       "buffs": "N/A",
       "units": "N/A",
       "tier": "N/A",
-      "pairings": "N/A"
+      "pairings": "N/A",
+      "talent": "https://callofdragonsguides.com/chakcha-talent-tree-build-and-guide/"
     },
     "Eliana": {
       "image": "Eliana.png",
@@ -51,7 +56,8 @@
       "buffs": "Peacekeeping",
       "units": "Overall",
       "tier": "B-",
-      "pairings": "N/A"
+      "pairings": "N/A",
+      "talent": "https://callofdragonsguides.com/eliana-talent-tree-build-and-guide/"
     },
     "Emrys": {
       "image": "Emrys.png",
@@ -60,7 +66,8 @@
       "buffs": "PvP",
       "units": "Cavalry",
       "tier": "S",
-      "pairings": "Alistair/Bakshi"
+      "pairings": "Alistair/Bakshi",
+      "talent": "https://callofdragonsguides.com/emrys-talent-tree-build-and-guide/"
     },
     "Gwanwyn": {
       "image": "Gwanwyn.png",
@@ -69,7 +76,8 @@
       "buffs": "Peacekeeping",
       "units": "Marksman",
       "tier": "B",
-      "pairings": "Kregg/Nico"
+      "pairings": "Kregg/Nico",
+      "talent": "https://callofdragonsguides.com/gwanwyn-talent-tree-build-guide/"
     },
     "Hosk": {
       "image": "Hosk.png",
@@ -78,7 +86,8 @@
       "buffs": "Rally",
       "units": "Overall",
       "tier": "S",
-      "pairings": "Nico/Kinnara"
+      "pairings": "Nico/Kinnara",
+      "talent": "https://callofdragonsguides.com/hosk-talent-tree-build-and-guide/"
     },
     "Kella": {
       "image": "Kella.png",
@@ -87,7 +96,8 @@
       "buffs": "N/A",
       "units": "N/A",
       "tier": "N/A",
-      "pairings": "N/A"
+      "pairings": "N/A",
+      "talent": "https://callofdragonsguides.com/kella-talent-tree-build-and-guide/"
     },
     "Kinnara": {
       "image": "Kinnara.png",
@@ -96,7 +106,8 @@
       "buffs": "PvP",
       "units": "Marksman",
       "tier": "S+",
-      "pairings": "Nico/Gwanwyn"
+      "pairings": "Nico/Gwanwyn",
+      "talent": "https://callofdragonsguides.com/kinnara-talent-tree-build-and-guide/"
     },
     "Kregg": {
       "image": "Kregg.png",
@@ -105,7 +116,8 @@
       "buffs": "Engineering",
       "units": "Marksman",
       "tier": "B",
-      "pairings": "Gwanwyn/Nico"
+      "pairings": "Gwanwyn/Nico",
+      "talent": "https://callofdragonsguides.com/kregg-talent-tree-build-and-guide/"
     },
     "Liliya": {
       "image": "Liliya.png",
@@ -114,7 +126,8 @@
       "buffs": "Peacekeeping",
       "units": "Magic",
       "tier": "S+",
-      "pairings": "Waldyr/Velyn"
+      "pairings": "Waldyr/Velyn",
+      "talent": "https://callofdragonsguides.com/liliya-talent-tree-build-and-guide/"
     },
     "Madeline": {
       "image": "Madeline.png",
@@ -123,7 +136,8 @@
       "buffs": "Tank",
       "units": "Overall",
       "tier": "S",
-      "pairings": "Nika/Hosk"
+      "pairings": "Nika/Hosk",
+      "talent": "https://callofdragonsguides.com/madeline-talent-tree-build-and-guide/"
     },
     "Nico": {
       "image": "Nico.png",
@@ -132,7 +146,8 @@
       "buffs": "Precision",
       "units": "Marksman",
       "tier": "A+",
-      "pairings": "Gwanwyn/Hosk"
+      "pairings": "Gwanwyn/Hosk",
+      "talent": "https://callofdragonsguides.com/nico-talent-tree-build-guide/"
     },
     "Nika": {
       "image": "Nika.png",
@@ -141,7 +156,8 @@
       "buffs": "Peacekeeping",
       "units": "Infantry",
       "tier": "S",
-      "pairings": "Madeline/Hosk"
+      "pairings": "Madeline/Hosk",
+      "talent": "https://callofdragonsguides.com/nika-talent-tree-build-and-guide/"
     },
     "Ordo": {
       "image": "Ordo.png",
@@ -150,7 +166,8 @@
       "buffs": "N/A",
       "units": "N/A",
       "tier": "N/A",
-      "pairings": "N/A"
+      "pairings": "N/A",
+      "talent": "https://callofdragonsguides.com/ordo-talent-tree-build-and-guide/"
     },
     "Theia": {
       "image": "Theia.png",
@@ -159,7 +176,8 @@
       "buffs": "PvP",
       "units": "Overall",
       "tier": "S",
-      "pairings": "Atheus/Kregg"
+      "pairings": "Atheus/Kregg",
+      "talent": "https://callofdragonsguides.com/theia-talent-tree-build-and-guide/"
     },
     "Velyn": {
       "image": "Velyn.png",
@@ -168,7 +186,8 @@
       "buffs": "PvP",
       "units": "Magic",
       "tier": "S",
-      "pairings": "Liliya/Waldyr"
+      "pairings": "Liliya/Waldyr",
+      "talent": "https://callofdragonsguides.com/velyn-talent-tree-build-guide/"
     },
     "Waldyr": {
       "image": "Waldyr.png",
@@ -177,6 +196,7 @@
       "buffs": "PvP",
       "units": "Magic",
       "tier": "A",
-      "pairings": "Liliya/Velyn"
+      "pairings": "Liliya/Velyn",
+      "talent": "https://callofdragonsguides.com/waldyr-talent-tree-build-and-guide/"
     }
 }

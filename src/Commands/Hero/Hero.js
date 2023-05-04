@@ -51,7 +51,8 @@ module.exports = {
             { name: "Buffs:", value: `${hero[userSelection]["buffs"]}`, inline: false },
             { name: "Units:", value: `${hero[userSelection]["units"]}`, inline: false },
             { name: "Tier:", value: `${hero[userSelection]["tier"]}`, inline: false },
-            { name: "Best Pairings", value: `${hero[userSelection]["pairings"]}`, inline: false })
+            { name: "Best Pairings:", value: `${hero[userSelection]["pairings"]}`, inline: false },
+            { name: "Talent Tree:", value: `${hero[userSelection]["talent"]}`, inline: false })
 
         await message.reply({ files: [attachment], embeds: [embed, embed2] })
       } else {
@@ -65,7 +66,8 @@ module.exports = {
             { name: "Buffs:", value: `${hero[userSelection]["buffs"]}`, inline: false },
             { name: "Units:", value: `${hero[userSelection]["units"]}`, inline: false },
             { name: "Tier:", value: `${hero[userSelection]["tier"]}`, inline: false },
-            { name: "Best Pairings", value: `${hero[userSelection]["pairings"]}`, inline: false })
+            { name: "Best Pairings:", value: `${hero[userSelection]["pairings"]}`, inline: false },
+            { name: "Talent Tree:", value: `${hero[userSelection]["talent"]}`, inline: false })
 
         await message.reply({ embeds: [embed] })
 
