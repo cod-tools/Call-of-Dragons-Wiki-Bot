@@ -1,3 +1,3 @@
 {
-    "help": "`c!heroes`\nGet a list of all available heroes\n\n`c!hero <name>`\nGet information about a hero\n\n`c!artifacts`\nGet a list of all available artifacts\n\n`c!artifact <name>`\nGet information about an artifact"
+    "help": "`c!heroes`\nGet a list of all available heroes\n\n`c!hero <name>`\nGet information about a hero\n\n`c!behemoths`\nGet a list of all available behemoths\n\n`c!behemoth <name>`\nGet information about a behemoth\n\n`c!artifacts`\nGet a list of all available artifacts\n\n`c!artifact <name>`\nGet information about an artifact"
 }

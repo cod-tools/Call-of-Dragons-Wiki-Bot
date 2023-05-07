@@ -1,0 +1,50 @@
+{
+    "Giant Bear": {
+      "image": "Bear.png",
+      "level": "1",
+      "health": "300,000",
+      "tutorial": "https://www.youtube.com/watch?v=bDUTisht5p0"
+    },
+    "Giant": {
+        "image": "Giant.png",
+        "level": "2",
+        "health": "300,000",
+        "tutorial": "https://www.youtube.com/watch?v=EfjwEXxdfJI"
+    },
+    "Thunder Roc": {
+        "image": "Roc.png",
+        "level": "3",
+        "health": "1,000,000",
+        "tutorial": "https://www.youtube.com/watch?v=mEYf6MwBElg"
+    },
+    "Hydra": {
+        "image": "Hydra.png",
+        "level": "4",
+        "health": "1,500,000",
+        "tutorial": "https://www.youtube.com/watch?v=gllTPoNL5hg"
+    },
+    "Direbear": {
+        "image": "Direbear.png",
+        "level": "5",
+        "health": "2,500,000",
+        "tutorial": "https://www.youtube.com/watch?v=1EYRfUPl0ZA"
+    },
+    "Necrogiant": {
+        "image": "Necrogiant.png",
+        "level": "6",
+        "health": "2,500,000",
+        "tutorial": "https://www.youtube.com/watch?v=AsxTDsTsa74"
+    },
+    "Magma Daemon": {
+        "image": "Magma.png",
+        "level": "7",
+        "health": "2,800,000",
+        "tutorial": "https://www.youtube.com/watch?v=LeitdHYoL8E"
+    },
+    "Flame Dragon": {
+        "image": "Dragon.png",
+        "level": "8",
+        "health": "10,000,000",
+        "tutorial": "https://www.youtube.com/watch?v=fCJjivo0sNU"
+    }
+}
