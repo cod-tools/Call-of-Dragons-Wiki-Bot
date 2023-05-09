@@ -48,4 +48,4 @@ Want to learn how to add contents directly? Check out the instructions [HERE](ht
 With your help, we can make our bot the go-to resource for Call of Dragons fans everywhere.
 
 ## Contributors ❤️
-To be added
+Menda#5753
