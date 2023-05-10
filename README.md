@@ -47,5 +47,9 @@ Want to learn how to add contents directly? Check out the instructions [HERE](ht
 
 With your help, we can make our bot the go-to resource for Call of Dragons fans everywhere.
 
+<h2 align="center">
+  <a href="https://discord.com/invite/TFjt39ezmp" target="_blank">Support Server [New]</a>
+</h2>
+
 ## Contributors ❤️
 Menda#5753
