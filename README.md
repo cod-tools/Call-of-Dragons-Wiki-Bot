@@ -1,6 +1,16 @@
 <h2 align="center">
   Call of Dragons Wiki Bot<br/>
-  <a href="https://discord.com/api/oauth2/authorize?client_id=1100937871969501364&permissions=274878024704&scope=bot" target="_blank_">Invite Bot</a>
+  <table align="center">
+    <tr>
+      <a href="https://discord.com/api/oauth2/authorize?client_id=1100937871969501364&permissions=274878024704&scope=bot" target="_blank_">Vote Bot</a>
+    </tr>
+    <tr>
+      <a href="https://top.gg/bot/1100937871969501364/vote" target="_blank_">Invite Bot</a>
+    </tr>
+    <tr>
+      <a href="https://discord.com/invite/TFjt39ezmp" target="_blank_">Support Server</a>
+    </tr>
+  </table>
 </h2>
 
 Looking for information about Call of Dragons? Look no further than our trusty bot, designed to provide you with all the details you need about this thrilling game. With our bot, you'll have access to the latest information about heroes, artifacts, and behemoths – all in one convenient place.
@@ -46,10 +56,6 @@ We're always looking for contributors to help us make our bot even better. Wheth
 Want to learn how to add contents directly? Check out the instructions [HERE](https://github.com/GamerRaven/Call-of-Dragons-Wiki-Bot/wiki/Code-Format).
 
 With your help, we can make our bot the go-to resource for Call of Dragons fans everywhere.
-
-<h2 align="center">
-  <a href="https://discord.com/invite/TFjt39ezmp" target="_blank_">Support Server [New]</a>
-</h2>
 
 ## Contributors ❤️
 Menda#5753
