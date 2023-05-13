@@ -4,10 +4,10 @@
     <tr>
       <a href="https://discord.com/api/oauth2/authorize?client_id=1100937871969501364&permissions=274878024704&scope=bot" target="_blank_">Vote Bot</a>
     </tr>
-    <tr>
+    <tr style="margin-left:10px;">
       <a href="https://top.gg/bot/1100937871969501364/vote" target="_blank_">Invite Bot</a>
     </tr>
-    <tr>
+    <tr style="margin-left:10px;">
       <a href="https://discord.com/invite/TFjt39ezmp" target="_blank_">Support Server</a>
     </tr>
   </table>
