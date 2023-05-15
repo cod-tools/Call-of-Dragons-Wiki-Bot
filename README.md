@@ -29,7 +29,7 @@ Our bot is constantly being updated with new content, so you can stay up-to-date
 Get a list of all available commands
 
 ### Hero
-<img src="https://raw.githubusercontent.com/GamerRaven/Call-of-Dragons-Wiki-Bot/main/.readme/Hero.png">
+<img src="https://raw.githubusercontent.com/GamerRaven/Call-of-Dragons-Wiki-Bot/main/.readme/Hero.png" width="40%">
 
 ## Installation
 
