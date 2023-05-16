@@ -34,7 +34,7 @@ Get a list of all available commands
 <img src="https://raw.githubusercontent.com/GamerRaven/Call-of-Dragons-Wiki-Bot/main/.readme/Hero.png" width="40%">
 
 ### Artifact
-<img src="https://raw.githubusercontent.com/GamerRaven/Call-of-Dragons-Wiki-Bot/main/.readme/Artifact.png" width="40%">
+<img src="https://raw.githubusercontent.com/GamerRaven/Call-of-Dragons-Wiki-Bot/main/.readme/Artifact.png" width="20%">
 
 ### Behemoth
 <img src="https://raw.githubusercontent.com/GamerRaven/Call-of-Dragons-Wiki-Bot/main/.readme/Behemoth.png" width="40%">
