@@ -1,6 +1,6 @@
 <h2 align="center">
   Call of Dragons Wiki Bot<br/>
-  <a href="https://cod.tools/wikibot" target="_blank">Website</a>
+  <a href="https://rb.gy/3aqyn" target="_blank">Website</a>
 </h2>
 
 - [Invite Bot](https://discord.com/api/oauth2/authorize?client_id=1100937871969501364&permissions=274878024704&scope=bot)
