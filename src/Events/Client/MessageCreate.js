@@ -21,7 +21,7 @@ module.exports = {
       const embed = new EmbedBuilder()
         .setColor('Red')
         .setTitle("Command not found")
-        .setDescription(`\`${message.content}\` is not a valid command.\nUse **${prefix}help** for a list of all commands.`)
+        .setDescription(`\`${message.content}\` does not exist.\nUse **${prefix}help** for a list of all commands.`)
   
       return message.reply({ embeds: [embed] })
     }
