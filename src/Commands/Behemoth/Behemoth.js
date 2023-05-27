@@ -47,7 +47,8 @@ module.exports = {
           .setColor("#f59e0b")
           .setFields(
             { name: "Level:", value: `${behemoth[userSelection]["level"]}`, inline: false },
-            { name: "Health", value: `${behemoth[userSelection]["health"]}`, inline: false },
+            { name: "Location:", value: `${behemoth[userSelection]["health"]}`, inline: false },
+            { name: "Health:", value: `${behemoth[userSelection]["health"]}`, inline: false },
             { name: "Tutorial:", value: `${behemoth[userSelection]["tutorial"]}`, inline: false })
 
         await message.reply({ files: [attachment], embeds: [embed, embed2] })
@@ -57,7 +58,8 @@ module.exports = {
           .setColor("#f59e0b")
           .setFields(
             { name: "Level:", value: `${behemoth[userSelection]["level"]}`, inline: false },
-            { name: "Health", value: `${behemoth[userSelection]["health"]}`, inline: false },
+            { name: "Location:", value: `${behemoth[userSelection]["health"]}`, inline: false },
+            { name: "Health:", value: `${behemoth[userSelection]["health"]}`, inline: false },
             { name: "Tutorial:", value: `${behemoth[userSelection]["tutorial"]}`, inline: false })
 
         await message.reply({ embeds: [embed] })
