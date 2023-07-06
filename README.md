@@ -24,11 +24,6 @@ Our bot is constantly being updated with new content, so you can stay up-to-date
 | Behemoths         | **<u>Partly Done</u>** |
 | Tier Lists        | **<u>To be added</u>** |
 
-### Commands
->c!help
-
-Get a list of all available commands
-
 ## Showcase
 
 ### Hero
