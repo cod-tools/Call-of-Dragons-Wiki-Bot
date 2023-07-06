@@ -30,9 +30,9 @@ const logFormat = printf(({ level, message, timestamp, stack }) => {
   let formattedLog;
 
   if (stack) {
-    formattedLog = `[${timestamp}] [${level.toUpperCase()}]: 🢃\n${stack}\x1b[0m`;
+    formattedLog = `[${timestamp}]: 🢃\n${stack}\x1b[0m`;
   } else {
-    formattedLog = `[${timestamp}] [${level.toUpperCase()}]: ${message}\x1b[0m`;
+    formattedLog = `[${timestamp}]: ${message}\x1b[0m`;
   }
 
   return colorize(formattedLog, level)

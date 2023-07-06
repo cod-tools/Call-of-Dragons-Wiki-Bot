@@ -24,11 +24,10 @@ const client = new Client({
 });
 
 require("dotenv").config();
-client.config = require("./../config.json")
 console.clear()
 
-client.prefixCommands = new Collection();
-client.prefixCooldowns = new Collection();
+client.slashCommands = new Collection();
+client.slashCooldowns = new Collection();
 
 const utilFolders = ['Handlers'];
 

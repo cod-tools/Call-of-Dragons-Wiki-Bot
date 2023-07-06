@@ -1,23 +1,24 @@
-const { EmbedBuilder } = require("discord.js");
-const artifacts = require("../../../contents/artifacts.json");
+const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const artifact = require("../../../contents/artifacts.json");
 
 module.exports = {
-  name: "artifacts",
-  description: "Get a list of all available artifacts",
-  cooldown: 5, // seconds
-  botPermissions: "SendMessages",
+    cooldown: 5,
+    data: new SlashCommandBuilder()
+        .setName("artifacts")
+        .setDescription("Get a list of all available artifacts")
+        .setDMPermission(false),
 
-  async execute(message, args) {
+    async execute(interaction) {
 
-    const artifactNames = Object.keys(artifacts).sort();
+        const artifactNames = Object.keys(artifact).sort();
 
-    const response = artifactNames.map((artifact) => `**${artifact}**`).join("\n\n")
+        const artifacts = artifactNames.map((artifact) => `**${artifact}**`).join("\n\n")
 
-    const embed = new EmbedBuilder()
-      .setColor("#f59e0b")
-      .setTitle("Heres a list of all available artifacts!")
-      .setDescription(response)
+        const embed = new EmbedBuilder()
+            .setColor("#f59e0b")
+            .setTitle("Heres a list of all available artifacts!")
+            .setDescription(artifacts)
 
-    await message.reply({ embeds: [embed] });
-  },
+        await interaction.reply({ embeds: [embed], ephemeral: true });
+    },
 };

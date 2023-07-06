@@ -1,69 +1,57 @@
-const { EmbedBuilder, AttachmentBuilder } = require("discord.js");
-const behemoth = require("../../../contents/behemoths.json");
+const { SlashCommandBuilder, EmbedBuilder, AttachmentBuilder } = require("discord.js");
+const behemoths = require("../../../contents/behemoths.json");
 
 module.exports = {
-  name: "behemoth",
-  description: "Get information about an behemoth",
-  usage: "<name>",
-  example: "behemoth Magic Bomb",
-  cooldown: 5, // seconds
-  args: true,
-  botPermissions: "SendMessages",
+    cooldown: 5,
+    data: new SlashCommandBuilder()
+        .setName("behemoth")
+        .setDescription("Get information about a behemoth.")
+        .setDMPermission(false)
+        .addStringOption(option =>
+            option
+                .setName("name")
+                .setDescription("Name of the behemoth")
+                .setRequired(true)
+                .setAutocomplete(true)
+        ),
 
-  async execute(message, args) {
+    async autocomplete(interaction) {
+        const focusedValue = interaction.options.getFocused().toLowerCase();
+        const choices = Object.keys(behemoths);
+        const filtered = choices.filter(choice => choice.toLowerCase().startsWith(focusedValue)).slice(0, 25);
+        await interaction.respond(filtered.map(choice => ({ name: choice, value: choice })));
+    },
 
-    const userSelection = args.join(" ")
+    async execute(interaction) {
+        const userSelection = interaction.options.getString("name");
 
-    if (!userSelection) {
-      return;
-    }
-
-    if (!behemoth[userSelection]) {
-      const errEmbed = new EmbedBuilder()
-        .setColor("Red")
-        .setDescription(`Sorry, ${userSelection} is not a valid behemoth name.`)
-
-      const m = await message.reply({ embeds: [errEmbed] });
-
-      setTimeout(async () => {
-        await m.delete();
-        await message.delete();
-      }, 5_000);
-
-    } else {
-
-      const attachment = new AttachmentBuilder()
-        .setFile(`./assets/behemoth/${behemoth[userSelection]["image"]}`)
-        .setName("image.png")
-
-      if (behemoth[userSelection]["image"] !== "") {
+        const selectedBehemoth = behemoths[userSelection];
 
         const embed = new EmbedBuilder()
-          .setColor("#f59e0b")
-          .setTitle(`${userSelection}`)
-          .setImage("attachment://image.png")
+            .setColor("#f59e0b")
+            .setTitle(userSelection)
+            .setFields(
+                { name: "Level:", value: selectedBehemoth.level, inline: false },
+                // { name: "Location:", value: selectedBehemoth.health, inline: false }, Location !== health...
+                { name: "Health:", value: selectedBehemoth.health, inline: false },
+                { name: "Tutorial:", value: selectedBehemoth.tutorial, inline: false },
+            );
 
-        const embed2 = new EmbedBuilder()
-          .setColor("#f59e0b")
-          .setFields(
-            { name: "Level:", value: `${behemoth[userSelection]["level"]}`, inline: false },
-            { name: "Location:", value: `${behemoth[userSelection]["health"]}`, inline: false },
-            { name: "Health:", value: `${behemoth[userSelection]["health"]}`, inline: false },
-            { name: "Tutorial:", value: `${behemoth[userSelection]["tutorial"]}`, inline: false })
+        if (selectedBehemoth.image !== "") {
 
-        await message.reply({ files: [attachment], embeds: [embed, embed2] })
-      } else {
+            const attachment = new AttachmentBuilder()
+                .setFile(`./assets/behemoth/${selectedBehemoth.image}`)
+                .setName(`image.png`)
 
-        const embed = new EmbedBuilder()
-          .setColor("#f59e0b")
-          .setFields(
-            { name: "Level:", value: `${behemoth[userSelection]["level"]}`, inline: false },
-            { name: "Location:", value: `${behemoth[userSelection]["health"]}`, inline: false },
-            { name: "Health:", value: `${behemoth[userSelection]["health"]}`, inline: false },
-            { name: "Tutorial:", value: `${behemoth[userSelection]["tutorial"]}`, inline: false })
+            const embed2 = new EmbedBuilder()
+                .setColor("#f59e0b")
+                .setTitle(`${userSelection}`)
+                .setImage("attachment://image.png")
 
-        await message.reply({ embeds: [embed] })
-      }
-    }
-  },
+            await interaction.reply({ files: [attachment], embeds: [embed2, embed] });
+        } else {
+            await interaction.reply({ embeds: [embed] });
+        }
+
+    },
 };

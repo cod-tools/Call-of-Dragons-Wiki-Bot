@@ -1,78 +1,60 @@
-const { EmbedBuilder, AttachmentBuilder } = require("discord.js");
-const hero = require("../../../contents/heroes.json");
+const { SlashCommandBuilder, EmbedBuilder, AttachmentBuilder } = require("discord.js");
+const heros = require("../../../contents/heroes.json");
 
 module.exports = {
-  name: "hero",
-  description: "Get information about a hero",
-  usage: "<name>",
-  example: "hero Alistair",
-  cooldown: 5, // seconds
-  args: true,
-  botPermissions: "SendMessages",
+    cooldown: 5,
+    data: new SlashCommandBuilder()
+        .setName("hero")
+        .setDescription("Get information about a hero.")
+        .setDMPermission(false)
+        .addStringOption(option =>
+            option
+                .setName("name")
+                .setDescription("Name of the behemoth")
+                .setRequired(true)
+                .setAutocomplete(true)
+        ),
 
-  async execute(message, args) {
+    async autocomplete(interaction) {
+        const focusedValue = interaction.options.getFocused().toLowerCase();
+        const choices = Object.keys(heros);
+        const filtered = choices.filter(choice => choice.toLowerCase().startsWith(focusedValue)).slice(0, 25);
+        await interaction.respond(filtered.map(choice => ({ name: choice, value: choice })));
+    },
 
-    const userSelection = args[0];
+    async execute(interaction) {
+        const userSelection = interaction.options.getString("name");
 
-    if (!userSelection) {
-      return;
-    }
-
-    if (!hero[userSelection]) {
-      const errEmbed = new EmbedBuilder()
-        .setColor("Red")
-        .setDescription(`Sorry, ${userSelection} is not a valid hero name.`)
-
-      const m = await message.reply({ embeds: [errEmbed] });
-
-      setTimeout(async () => {
-        await m.delete();
-        await message.delete();
-      }, 5_000);
-
-    } else {
-
-      const attachment = new AttachmentBuilder()
-        .setFile(`./assets/hero/${hero[userSelection]["image"]}`)
-        .setName("image.png")
-
-      if (hero[userSelection]["image"] !== "") {
+        const selectedHero = heros[userSelection];
 
         const embed = new EmbedBuilder()
-          .setColor("#f59e0b")
-          .setTitle(userSelection)
-          .setImage("attachment://image.png")
+            .setColor("#f59e0b")
+            .setTitle(userSelection)
+            .setFields(
+                { name: "Rarity:", value: selectedHero.rarity, inline: false },
+                { name: "Role:", value: selectedHero.role, inline: false },
+                { name: "Buffs:", value: selectedHero.buffs, inline: false },
+                { name: "Units:", value: selectedHero.units, inline: false },
+                { name: "Tier:", value: selectedHero.tier, inline: false },
+                { name: "Best Pairings:", value: selectedHero.pairings, inline: false },
+                { name: "Talent Tree:", value: selectedHero.talent, inline: false }
+            );
 
-        const embed2 = new EmbedBuilder()
-          .setColor("#f59e0b")
-          .setFields(
-            { name: "Rarity:", value: `${hero[userSelection]["rarity"]}`, inline: false },
-            { name: "Role:", value: `${hero[userSelection]["role"]}`, inline: false },
-            { name: "Buffs:", value: `${hero[userSelection]["buffs"]}`, inline: false },
-            { name: "Units:", value: `${hero[userSelection]["units"]}`, inline: false },
-            { name: "Tier:", value: `${hero[userSelection]["tier"]}`, inline: false },
-            { name: "Best Pairings:", value: `${hero[userSelection]["pairings"]}`, inline: false },
-            { name: "Talent Tree:", value: `${hero[userSelection]["talent"]}`, inline: false })
+        if (selectedHero.image !== "") {
 
-        await message.reply({ files: [attachment], embeds: [embed, embed2] })
-      } else {
+            const attachment = new AttachmentBuilder()
+                .setFile(`./assets/hero/${selectedHero.image}`)
+                .setName(`image.png`)
 
-        const embed = new EmbedBuilder()
-          .setColor("#f59e0b")
-          .setTitle(userSelection)
-          .setFields(
-            { name: "Rarity:", value: `${hero[userSelection]["rarity"]}`, inline: false },
-            { name: "Role:", value: `${hero[userSelection]["role"]}`, inline: false },
-            { name: "Buffs:", value: `${hero[userSelection]["buffs"]}`, inline: false },
-            { name: "Units:", value: `${hero[userSelection]["units"]}`, inline: false },
-            { name: "Tier:", value: `${hero[userSelection]["tier"]}`, inline: false },
-            { name: "Best Pairings:", value: `${hero[userSelection]["pairings"]}`, inline: false },
-            { name: "Talent Tree:", value: `${hero[userSelection]["talent"]}`, inline: false })
+            const embed2 = new EmbedBuilder()
+                .setColor("#f59e0b")
+                .setTitle(`${userSelection}`)
+                .setImage("attachment://image.png")
 
-        await message.reply({ embeds: [embed] })
+            await interaction.reply({ files: [attachment], embeds: [embed2, embed] });
+        } else {
+            await interaction.reply({ embeds: [embed] });
+        }
 
-      }
-
-    }
-  },
+    },
 };

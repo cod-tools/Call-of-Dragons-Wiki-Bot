@@ -1,23 +1,24 @@
-const { EmbedBuilder } = require("discord.js");
-const heroes = require("../../../contents/heroes.json");
+const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const hero = require("../../../contents/heroes.json");
 
 module.exports = {
-  name: "heroes",
-  description: "Get a list of all available heroes",
-  cooldown: 5, // seconds
-  botPermissions: "SendMessages",
+    cooldown: 5,
+    data: new SlashCommandBuilder()
+        .setName("heroes")
+        .setDescription("Get a list of all available heroes")
+        .setDMPermission(false),
 
-  async execute(message, args) {
+    async execute(interaction) {
 
-    const heroNames = Object.keys(heroes).sort();
+        const heroNames = Object.keys(hero).sort();
 
-    const response = heroNames.map(hero => `**${hero}**`).join("\n\n")
+        const heros = heroNames.map((hero) => `**${hero}**`).join("\n\n")
 
-    const embed = new EmbedBuilder()
-      .setColor("#f59e0b")
-      .setTitle("Heres a list of all available heroes!")
-      .setDescription(response)
+        const embed = new EmbedBuilder()
+            .setColor("#f59e0b")
+            .setTitle("Heres a list of all available heroes!")
+            .setDescription(heros)
 
-    await message.reply({ embeds: [embed] });
-  },
+        await interaction.reply({ embeds: [embed], ephemeral: true });
+    },
 };

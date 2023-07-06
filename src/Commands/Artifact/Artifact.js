@@ -1,71 +1,58 @@
-const { EmbedBuilder, AttachmentBuilder } = require("discord.js");
-const artifact = require("../../../contents/artifacts.json");
+const { SlashCommandBuilder, EmbedBuilder, AttachmentBuilder } = require("discord.js");
+const artifacts = require("../../../contents/artifacts.json");
 
 module.exports = {
-  name: "artifact",
-  description: "Get information about an artifact",
-  usage: "<name>",
-  example: "artifact Magic Bomb",
-  cooldown: 5, // seconds
-  args: true,
-  botPermissions: "SendMessages",
+    cooldown: 5,
+    data: new SlashCommandBuilder()
+        .setName("artifact")
+        .setDescription("Get information about an artifact")
+        .setDMPermission(false)
+        .addStringOption(option =>
+            option
+                .setName("name")
+                .setDescription("Name of the artifact")
+                .setRequired(true)
+                .setAutocomplete(true)
+        ),
 
-  async execute(message, args) {
+    async autocomplete(interaction) {
+        const focusedValue = interaction.options.getFocused().toLowerCase();
+        const choices = Object.keys(artifacts);
+        const filtered = choices.filter(choice => choice.toLowerCase().startsWith(focusedValue)).slice(0, 25);
+        await interaction.respond(filtered.map(choice => ({ name: choice, value: choice })));
+    },
 
-    const userSelection = args.join(" ")
+    async execute(interaction) {
+        const userSelection = interaction.options.getString("name");
 
-    if (!userSelection) {
-      return;
-    }
-
-    if (!artifact[userSelection]) {
-      const errEmbed = new EmbedBuilder()
-        .setColor("Red")
-        .setDescription(`Sorry, ${userSelection} is not a valid artifact name.`)
-
-      const m = await message.reply({ embeds: [errEmbed] });
-
-      setTimeout(async () => {
-        await m.delete();
-        await message.delete();
-      }, 5_000);
-
-    } else {
-
-      const attachment = new AttachmentBuilder()
-        .setFile(`./assets/artifact/${artifact[userSelection]["image"]}`)
-        .setName("image.png")
-
-      if (artifact[userSelection]["image"] !== "") {
+        const selectedArtifact = artifacts[userSelection];
 
         const embed = new EmbedBuilder()
-          .setColor("#f59e0b")
-          .setTitle(`${userSelection}`)
-          .setImage("attachment://image.png")
+            .setColor("#f59e0b")
+            .setTitle(userSelection)
+            .setFields(
+                { name: "Rarity:", value: selectedArtifact.rarity, inline: false },
+                { name: "Role:", value: selectedArtifact.role, inline: false },
+                { name: "Buffs:", value: selectedArtifact.buffs, inline: false },
+                { name: "Units:", value: selectedArtifact.units, inline: false },
+                { name: "Tier:", value: selectedArtifact.tier, inline: false }
+            );
 
-        const embed2 = new EmbedBuilder()
-          .setColor("#f59e0b")
-          .setFields(
-            { name: "Rarity:", value: `${artifact[userSelection]["rarity"]}`, inline: false },
-            { name: "Role:", value: `${artifact[userSelection]["role"]}`, inline: false },
-            { name: "Buffs:", value: `${artifact[userSelection]["buffs"]}`, inline: false },
-            { name: "Units:", value: `${artifact[userSelection]["units"]}`, inline: false },
-            { name: "Tier:", value: `${artifact[userSelection]["tier"]}`, inline: false })
+        if (selectedArtifact.image !== "") {
 
-        await message.reply({ files: [attachment], embeds: [embed, embed2] })
-      } else {
+            const attachment = new AttachmentBuilder()
+                .setFile(`./assets/artifact/${selectedArtifact.image}`)
+                .setName(`image.png`)
 
-        const embed = new EmbedBuilder()
-          .setColor("#f59e0b")
-          .setFields(
-            { name: "Rarity:", value: `${artifact[userSelection]["rarity"]}`, inline: false },
-            { name: "Role:", value: `${artifact[userSelection]["role"]}`, inline: false },
-            { name: "Buffs:", value: `${artifact[userSelection]["buffs"]}`, inline: false },
-            { name: "Units:", value: `${artifact[userSelection]["units"]}`, inline: false },
-            { name: "Tier:", value: `${artifact[userSelection]["tier"]}`, inline: false })
+            const embed2 = new EmbedBuilder()
+                .setColor("#f59e0b")
+                .setTitle(`${userSelection}`)
+                .setImage("attachment://image.png")
 
-        await message.reply({ embeds: [embed] })
-      }
-    }
-  },
+            await interaction.reply({ files: [attachment], embeds: [embed2, embed] });
+        } else {
+            await interaction.reply({ embeds: [embed] });
+        }
+
+    },
 };
