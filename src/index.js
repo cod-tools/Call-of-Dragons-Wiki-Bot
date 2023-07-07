@@ -2,25 +2,15 @@ const { Client, GatewayIntentBits, Partials, Collection } = require("discord.js"
 const fs = require("node:fs");
 const log = require("./Utils/Logger/Logger")
 
-const client = new Client({
-  intents: [
-    GatewayIntentBits.Guilds,
-    GatewayIntentBits.GuildModeration,
-    GatewayIntentBits.GuildMessages,
-    GatewayIntentBits.GuildMembers,
-    GatewayIntentBits.GuildMessageReactions,
-    GatewayIntentBits.DirectMessages,
-    GatewayIntentBits.GuildPresences,
-    GatewayIntentBits.GuildEmojisAndStickers,
-    GatewayIntentBits.MessageContent,
-  ],
+const client = new Client({ intents: [],
   partials: [
-    Partials.Channel,
-    Partials.Reaction,
-    Partials.GuildMember,
-    Partials.Message,
-    Partials.User
-  ],
+      "CHANNEL",
+      "REACTION",
+      "GUILD_MEMBER",
+      "MESSAGE",
+      "REACTION",
+      "USER"
+  ]
 });
 
 require("dotenv").config();
